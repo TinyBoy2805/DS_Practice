@@ -1,5 +1,6 @@
 
 import ds.DynamicArray;
+import ds.Stack;
 import java.util.Objects;
 
 class Person 
@@ -48,16 +49,39 @@ public class App
        
         DynamicArray<Person> da = new DynamicArray<>();
 
-        Person p = new Person("aki", 12);
-        da.addElement(new Person("Ben", 12));
-        da.addElement(new Person("Ben2", 32));
-        da.addElement(new Person("Ben3", 2));
-        da.addElement(new Person("Ben4", 42));
-        da.addElement(p);
-        da.addElement(new Person("Ben5", 15));
+        // Person p = new Person("aki", 12);
+        // da.addElement(new Person("Ben", 12));
+        // da.addElement(new Person("Ben2", 32));
+        // da.addElement(new Person("Ben3", 2));
+        // da.addElement(new Person("Ben4", 42));
+        // da.addElement(p);
+        // da.addElement(new Person("Ben5", 15));
 
-        System.out.println(da.contains(p));
-        System.out.println(da.contains(new Person("Ben4", 42)));
+        // System.out.println(da.contains(p));
+        // System.out.println(da.contains(new Person("Ben4", 42)));
+
+
+        Stack<Integer> st = new Stack<>();
+
+        st.push(1);
+        st.push(2);
+        st.push(3);
+        st.push(4);
+
+        System.out.println(st.size());
+        
+        System.out.println(st.pop());
+        System.out.println(st.size());
+        System.out.println(st.peek());
+        st.pop();
+        System.out.println(st.size());
+        System.out.println(st.contains(3));
+
+
+        st.clear();
+
+        System.out.println(st.isEmpty());
+
 
 
 
